@@ -1,4 +1,4 @@
-#include stdio.h
+#include <stdio.h>
 
 int position = -1;
 
@@ -7,7 +7,7 @@ int stack_array[100];
 void push(int value)
 {
     stack_array[++position] = value;
-    printf(%d entered the stack in position %d n, value, position);
+    printf("%d entered the stack in position %d \n", value, position);
 }
 
 void pop()
@@ -26,19 +26,19 @@ void empty_stack()
 void show_stack()
 {
     int i=0;
-    if(position = 0)
+    if(position <= 0)
     {
-        printf(stack is emptyn);
+        printf("stack is empty\n");
     }
     else
     {
-        printf(the current values in the stack are);
-        while(i = position)
+        printf("the current values in the stack are");
+        while(i <= position)
         {
-            printf( %d, stack_array[i]);
+            printf(" %d", stack_array[i]);
             i++;
         }
-        printf(n);
+        printf("\n");
         
     }
 }
@@ -53,9 +53,6 @@ int main()
     show_stack();
     empty_stack();
     show_stack();
-    
-    
-    printf(...);
 
     return 0;
 }
