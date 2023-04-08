@@ -7,17 +7,19 @@ int stack_array[100];
 void push(int value)
 {
     stack_array[++position] = value;
-    printf("%d entered the stack in position %d \n", value, position);
+    printf("%d entered the stack in position %d \n", value, position+1);
 }
 
 void pop()
 {
-    stack_array[position] = '0';
+    printf("value %d been pop in the position %d \n", stack_array[position], position+1);
+    position--;
+    stack_array[position];
 }
 
 void empty_stack()
 {
-    while(position = 0)
+    while(position != 0)
     {
         stack_array[position--] = 0;
     }
@@ -50,9 +52,9 @@ int main()
     push(2);
     show_stack();
     pop();
+    push(7);
     show_stack();
     empty_stack();
     show_stack();
-
     return 0;
 }
